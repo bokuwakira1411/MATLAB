@@ -1,3 +1,7 @@
 # MATLAB
-# TR_ALS (TR alternating least square)
-# TR_SVD (sequential SVDs)
+Tensor decomposition
+Tensor ring:
+TR-SVDs:
+TR-ALS:
+TR-ALSAR:
+TR-BALS:
