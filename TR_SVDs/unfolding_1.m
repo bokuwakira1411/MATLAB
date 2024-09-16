@@ -4,4 +4,5 @@ T_1 = [];
 for i = 1:n
     T_1 = [T_1 tens2vec(T(i,:,:))];
 end
+T_1 = T_1';
 end
