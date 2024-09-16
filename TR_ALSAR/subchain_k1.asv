@@ -1,0 +1,22 @@
+function M = subchain_k1(cores, n)
+%subchain_matrix Compute mode-2 unfolding of subchain excluding n-th core
+%
+%subchain_unfolding = subchain_matrix(cores, n) returns the subchain
+%consisting of all cores except the n-th. This is what we call 
+%G_{[2]}^{\neq n} in the paper.
+
+N = length(cores);
+idx = [1:n];
+for j = 1:length(idx)
+    if j == 1
+        M = classical_modek_unfolding(cores{idx(j)}, 3).';
+    else
+        M = M * classical_modek_unfolding(cores{idx(j)}, 1);
+        R = size(cores{idx(j)}, 3);
+        M = reshape(M, numel(M)/R, R);
+    end
+end
+R1 = size(cores(1},1)
+[R0, ~, Rn] = size(cores{n});
+M = reshape(M, R1, numel(M), Rn);
+end
